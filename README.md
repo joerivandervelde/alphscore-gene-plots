@@ -1,7 +1,11 @@
 # alphscore-gene-plots
 
 Plot AlphaFold2-based pathogenicity prediction scores for a particular gene and suggest a gene-specific threshold for separating pathogenic from benign variants.
-Uses data from the brilliant resources listed below to whom all credits are due.
+An example:
+
+<img src="plots/PKD1.png" alt="PKD1" width="50%"/>
+
+More examples can be found in the [plots](plots) folder. These figures rely on data from the following brilliant resources to whom all credits are due:
 
 ### AlphScore
 * __Predicting the pathogenicity of missense variants using features derived from AlphaFold2__.
