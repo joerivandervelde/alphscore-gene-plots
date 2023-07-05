@@ -59,7 +59,7 @@ alphScores <- read.table(text=geneAlphScoreData, sep = '\t',header = FALSE, file
 # Retrieve ClinVar classifications #
 ####################################
 geneClinVarData <- tabix.read(clinVarLoc, geneTabix)
-geneClinVarDF <- read.table(text=geneClinVarData, sep = '\t',header = FALSE, fileEncoding = "UTF-16LE", col.names = c("chr","pos","id","ref","alt","qual","filter","info"))
+geneClinVarDF <- read.table(text=geneClinVarData, sep = '\t', quote="", fill=FALSE, header = FALSE, fileEncoding = "UTF-16LE", col.names = c("chr","pos","id","ref","alt","qual","filter","info"))
 # Remove any conflicts and records without a classification
 clinvar <- subset(geneClinVarDF, !grepl("Conflicting_interpretations_of_pathogenicity", geneClinVarDF$info, fixed=TRUE))
 clinvar <- subset(clinvar, !grepl("no_assertion_provided", clinvar$info, fixed=TRUE))
